@@ -1,4 +1,11 @@
 <h1><%= @post.title %></h1>
 <hr>
+
 <%= @post.body %>
+<hr>
+<%= link_to "<- Back to feed", posts_path %>
+&bull;
+<%= link_to "edit post", edit_post_path(@post) %>
+&bull;
+<%= link_to "Delete post", post_path(@post) , method: :delete, data: { confirm: "Are you sure you want to delete?" } %>
 
